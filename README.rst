@@ -1,7 +1,18 @@
 Daiquiri Tap
 ============
 
-Daiquiri Tap is a tiny wrapper for astroquery, adding support for token authorization.
+Daiquiri Tap is a tiny wrapper for astroquery.utils.tap, adding support for token authorization.
+
+Setup
+-----
+
+.. code:: bash
+
+    pip install git+https://github.com/aipescience/django-daiquiri-tap
+
+
+Usage
+-----
 
 It is used like `astroquery.utils.tap`, which is extensively documented in the `astroquery documentation <https://astroquery.readthedocs.io/en/latest/utils/tap.html>`_, but allows to set a token for authorized access to your user account.
 
