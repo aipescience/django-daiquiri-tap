@@ -1,8 +1,8 @@
 import re
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
-with open('daiquiri_tap.py') as f:
+with open('daiquiri_tap/__init__.py') as f:
     metadata = dict(re.findall(r'__(.*)__ = [\']([^\']*)[\']', f.read()))
 
 setup(
@@ -20,6 +20,6 @@ setup(
         'astroquery>=0.3.7'
     ],
     classifiers=[],
-    packages=find_packages(),
+    packages=['daiquiri_tap'],
     include_package_data=True
 )
