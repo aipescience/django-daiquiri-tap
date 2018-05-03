@@ -35,7 +35,7 @@ The token can be accessed under the url `/accounts/token/` of the particular Dai
 
     # clean up the job
     job_id = job2.get_jobid()
-    service.archive_job(job_id)
+    service.archive_async_job(job_id)
 
     # list all your jobs
     jobs = service.list_async_jobs()
