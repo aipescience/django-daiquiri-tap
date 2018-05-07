@@ -111,7 +111,7 @@ Example job management
     status='COMPLETED'
     qlist = list_queries_by_phase(service, jobs, status)
     for query in qlist:
-       print('ID: %s, date: %s  \n %s' % (x,query[x][1],query[x][0]))
+       print('ID: %s, date: %s  \n %s' % (x,qlist[query][1],qlist[query][0]))
        break   
     
     # archive all jobs older than 250 days 
