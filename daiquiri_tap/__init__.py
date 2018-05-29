@@ -207,13 +207,16 @@ class DaiquiriTap(Tap):
         args = {
             "REQUEST": "doQuery",
             "LANG": lang or "ADQL",
-            "QUEUE": queue,
             "FORMAT": str(outputFormat),
             "tapclient": str(TAP_CLIENT_ID),
             "PHASE": "RUN",
             "QUERY": str(query)}
+
         if name is not None:
-            args['jobname'] = name
+            args['TABLENAME'] = name
+        if queue is not None:
+            args['QUEUE'] = queue
+
         data = self._Tap__connHandler.url_encode(args)
         response = self._Tap__connHandler.execute_post(context, data)
         if verbose:
