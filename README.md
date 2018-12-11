@@ -13,9 +13,12 @@ import pyvo as vo
 # init tap service
 tap_service = vo.dal.TAPService('https://gaia.aip.de/tap')
 
+# set the 'Authorization' header with your token from https://gaia.aip.de/accounts/token/
 vo.utils.http.session.headers['Authorization'] = 'Token 23bec8595721dff3fce14265742cd6d0aaef6b95'
 
+# run a syncronous query
 tap_service.run_sync('SELECT TOP 5 source_id, ra, dec, parallax FROM gdr2.gaia_source ORDER BY random_index')
 
+# run a asyncronous query
 tap_service.run_async('SELECT TOP 5 source_id, ra, dec, parallax FROM gdr2.gaia_source ORDER BY random_index')
 ```
