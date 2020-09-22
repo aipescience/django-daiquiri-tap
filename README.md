@@ -5,6 +5,8 @@ Daiquiri Tap is a tiny wrapper for astroquery.utils.tap, adding support for toke
 
 **Daiquiri Tap is not supported anymore, please use [PyVO](https://pyvo.readthedocs.io/en/latest/) instead.**
 
+The [django-daiquiri](https://github.com/django-daiquiriframework) has now improved support for VO TAP.  
+
 You can use TAP token authorization in PyVO by manipulating the `vo.utils.http.session` object, e.g.:
 
 ```python
